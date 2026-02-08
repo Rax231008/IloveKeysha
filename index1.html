@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 🎵 MUSIC -->
+<audio id="bgMusic" loop muted>
+  <source src="Sweet - Cigarettes After Sex - Cigarettes After Sex.mp3" type="audio/mpeg">
+</audio>
+<button id="musicToggle">🔇</button>
+
+<header class="hero">
+  <h1>Hi, My Love 💕</h1>
+  <p>We’ve been together for</p>
+
+  <div class="timer">
+    <div><span id="years">0</span><small>Years</small></div>
+    <div><span id="months">0</span><small>Months</small></div>
+    <div><span id="days">0</span><small>Days</small></div>
+    <div><span id="hours">0</span><small>Hours</small></div>
+    <div><span id="minutes">0</span><small>Minutes</small></div>
+    <div><span id="seconds">0</span><small>Seconds</small></div>
+  </div>
+</header>
+
+<section class="photo-stage">
+  <img src="WhatsApp Image 2026-02-08 at 10.45.59 PM.jpeg" class="photo">
+  <img src="WhatsApp Image 2026-02-08 at 10.48.17 PM.jpeg" class="photo">
+  <img src="WhatsApp Image 2026-02-08 at 10.46.42 PM.jpeg" class="photo">
+</section>
+
+<section class="actions">
+  <button class="heart-btn" onclick="openLetter()">💌 Letter</button>
+  <button class="heart-btn" onclick="openModal('crossword')">🧩 Quiz</button>
+</section>
+
+<!-- 💌 LETTER -->
+<div class="modal" id="letter">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal('letter')">×</span>
+    <h2>My Letter ❤️</h2>
+    <p id="typedLetter"></p>
+  </div>
+</div>
+
+<!-- 🧩 CROSSWORD -->
+<div class="modal" id="crossword">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal('crossword')">×</span>
+    <h2>Mini Puzzle 🧠</h2>
+    <p>Who do I love the most?</p>
+    <input id="answer" placeholder="Type here…" />
+    <button onclick="checkAnswer()">Submit</button>
+    <p id="feedback"></p>
+  </div>
+</div>
+
+<!-- 📸 PHOTO ZOOM -->
+<div class="modal" id="photoModal">
+  <div class="modal-box photo-view">
+    <span class="close" onclick="closeModal('photoModal')">×</span>
+    <img id="zoomedPhoto">
+  </div>
+</div>
+
+<footer>Made with ❤️ just for you</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
